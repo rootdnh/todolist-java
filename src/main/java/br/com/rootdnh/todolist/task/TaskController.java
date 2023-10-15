@@ -39,7 +39,7 @@ public class TaskController {
 
     if (taskModel.getStartAt().isAfter(taskModel.getEndAt())) {
       return ResponseEntity.status(HttpStatus.BAD_REQUEST)
-              .body("A data de início deve ser menor que a final");
+              .body("A data de início deve ser menor que a final!");
     }
 
     var task = this.taskRepository.save(taskModel);
